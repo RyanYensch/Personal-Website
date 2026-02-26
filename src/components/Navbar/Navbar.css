@@ -9,8 +9,9 @@
     height: var(--navbar-height);
     z-index: 1000;
 
-    background: rgba(13, 27, 42, 0.55);
+    background: rgba(13, 27, 42, 0.4);
     border-bottom: 1px solid var(--glass-border);
+    border-radius: var(--r-lg);
 }
 
 /* CONTAINER */
@@ -24,13 +25,13 @@
     justify-content: space-between;
 }
 
-/* BRAND */
+/* Name */
 
 .navbar-name-link {
     text-decoration: none;
     color: var(--text-0);
 
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     font-weight: 600;
 
     padding: var(--pad-1) var(--pad-2);
@@ -105,6 +106,8 @@
 
 .navbar-dropdown {
     display: none;
+    background: rgba(13, 27, 42, 0.95);
+
 
     position: absolute;
     top: calc(var(--navbar-height) - 4px);
