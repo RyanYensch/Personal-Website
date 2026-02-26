@@ -39,7 +39,7 @@ export default function Navbar() {
                 </ul>
 
                 <button
-                    className="navbar-toggle glow-item"
+                    className={`navbar-toggle glow-item ${open ? "open" : ""}`}
                     type="button"
                     aria-label="Toggle navigation"
                     aria-expanded={open}

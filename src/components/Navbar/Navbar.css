@@ -100,6 +100,22 @@
     background: var(--text-0);
     margin: 3px 0;
     border-radius: 2px;
+
+    transition: transform var(--t-medium) var(--ease),
+        opacity var(--t-medium) var(--ease),
+        background var(--t-medium) var(--ease);
+}
+
+.navbar-toggle.open .navbar-toggle-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg) scale(1.25);
+}
+
+.navbar-toggle.open .navbar-toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.open .navbar-toggle-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg) scale(1.25);
 }
 
 /* DROPDOWN */
