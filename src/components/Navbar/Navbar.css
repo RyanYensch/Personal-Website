@@ -57,6 +57,9 @@
     text-decoration: none;
     color: var(--text-1);
 
+    font-size: 1.4rem;
+    font-weight: 800;
+
     padding: var(--pad-1) var(--pad-2);
     border-radius: var(--r-md);
 
@@ -163,7 +166,7 @@
 
 /* RESPONSIVE */
 
-@media (max-width: 450px) {
+@media (max-width: 660px) {
     .navbar-links {
         display: none;
     }
@@ -173,7 +176,7 @@
     }
 }
 
-@media (min-width: 451px) {
+@media (min-width: 661px) {
     .navbar-toggle {
         display: none;
     }

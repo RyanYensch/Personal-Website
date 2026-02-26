@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 
-const MOBILE_BREAKPOINT = 450;
+const MOBILE_BREAKPOINT = 660;
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
