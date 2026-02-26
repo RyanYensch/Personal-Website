@@ -21,6 +21,11 @@
     --glass-border-hover: rgba(224, 225, 221, 0.3);
     --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     --glow-cyan: 0 0 30px rgba(94, 234, 212, 0.12);
+    --glow-violet: 0 0 30px rgba(167, 139, 250, 0.14);
+    --glow-pink: 0 0 30px rgba(244, 114, 182, 0.12);
+    --glow-cyan-item: 0 0 18px rgba(94, 234, 212, 0.22);
+    --glow-violet-item: 0 0 18px rgba(167, 139, 250, 0.22);
+    --glow-pink-item: 0 0 18px rgba(244, 114, 182, 0.18);
     --glass-blur: 14px;
 
     /* Radius + Spacing */

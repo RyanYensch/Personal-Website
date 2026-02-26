@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="navbar-container">
                 <div className="navbar-name">
                     <Link
-                        className="navbar-name-link"
+                        className="navbar-name-link glow-item"
                         to="/"
                         onClick={() => setOpen(false)}
                     >
@@ -32,14 +32,14 @@ export default function Navbar() {
                 </div>
 
                 <ul className="navbar-links">
-                    <li><Link className="navbar-item-link" to="/projects">Projects</Link></li>
-                    <li><Link className="navbar-item-link" to="/courses">Courses</Link></li>
-                    <li><Link className="navbar-item-link" to="/career">Career</Link></li>
-                    <li><Link className="navbar-item-link" to="/links">Links</Link></li>
+                    <li><Link className="navbar-item-link glow-item" to="/projects">Projects</Link></li>
+                    <li><Link className="navbar-item-link glow-item" to="/courses">Courses</Link></li>
+                    <li><Link className="navbar-item-link glow-item" to="/career">Career</Link></li>
+                    <li><Link className="navbar-item-link glow-item" to="/links">Links</Link></li>
                 </ul>
 
                 <button
-                    className="navbar-toggle"
+                    className="navbar-toggle glow-item"
                     type="button"
                     aria-label="Toggle navigation"
                     aria-expanded={open}
@@ -53,10 +53,10 @@ export default function Navbar() {
 
             <div className={`navbar-dropdown glass ${open ? "open" : ""}`}>
                 <ul className="navbar-dropdown-links">
-                    <li><Link className="navbar-dropdown-item-link" to="/projects" onClick={() => setOpen(false)}>Projects</Link></li>
-                    <li><Link className="navbar-dropdown-item-link" to="/courses" onClick={() => setOpen(false)}>Courses</Link></li>
-                    <li><Link className="navbar-dropdown-item-link" to="/career" onClick={() => setOpen(false)}>Career</Link></li>
-                    <li><Link className="navbar-dropdown-item-link" to="/links" onClick={() => setOpen(false)}>Links</Link></li>
+                    <li><Link className="navbar-dropdown-item-link glow-item" to="/projects" onClick={() => setOpen(false)}>Projects</Link></li>
+                    <li><Link className="navbar-dropdown-item-link glow-item" to="/courses" onClick={() => setOpen(false)}>Courses</Link></li>
+                    <li><Link className="navbar-dropdown-item-link glow-item" to="/career" onClick={() => setOpen(false)}>Career</Link></li>
+                    <li><Link className="navbar-dropdown-item-link glow-item" to="/links" onClick={() => setOpen(false)}>Links</Link></li>
                 </ul>
             </div>
         </nav>
