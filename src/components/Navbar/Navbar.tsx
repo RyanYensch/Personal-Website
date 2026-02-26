@@ -1,9 +1,25 @@
 import { Link } from "react-router-dom";
 import "./Navbar.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const MOBILE_BREAKPOINT = 450;
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > MOBILE_BREAKPOINT) {
+                setOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
         <nav className="navbar">
