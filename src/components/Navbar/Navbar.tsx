@@ -11,7 +11,7 @@ export default function Navbar() {
                     </Link>
                 </div>
 
-                <ul className="navbar-links"> 
+                <ul className="navbar-links">
                     <li className="navbar-item">
                         <Link className="navbar-item-link" to="/projects">
                             Projects
