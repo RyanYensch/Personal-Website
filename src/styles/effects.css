@@ -1,0 +1,21 @@
+.glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--r-lg);
+}
+
+.glass-hover {
+    transition: transform var(--t-medium) var(--ease), border-color var(--t-medium) var(--ease);
+}
+
+.glass-hover:hover {
+    transform: translateY(-1px);
+    border-color: var(--glass-border-hover);
+}
+
+.glow-cyan {
+    box-shadow: var(--glass-shadow), var(--glow-cyan);
+}

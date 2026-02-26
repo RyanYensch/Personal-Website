@@ -18,8 +18,9 @@
     /* Glass */
     --glass-bg: rgba(13, 27, 42, 0.45);
     --glass-border: rgba(224, 225, 221, 0.18);
+    --glass-border-hover: rgba(224, 225, 221, 0.3);
     --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-
+    --glow-cyan: 0 0 30px rgba(94, 234, 212, 0.12);
     --glass-blur: 14px;
 
     /* Radius + Spacing */
