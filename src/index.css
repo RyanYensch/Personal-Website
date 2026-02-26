@@ -1,3 +1,7 @@
+@import "./styles/base.css";
+@import "./styles/tokens.css";
+@import "./styles/effects.css";
+
 html,
 body {
   margin: 0;
