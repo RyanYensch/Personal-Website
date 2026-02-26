@@ -1,86 +1,98 @@
-/* Full Width of Screen */
+/* NAVBAR ROOT */
+
 .navbar {
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;
+    height: var(--navbar-height);
     z-index: 1000;
 
-    background: #0D1B2A;
-    border-bottom: 1px solid #eaeaea;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    /* darker than cards */
+    background: rgba(13, 27, 42, 0.55);
+    border-bottom: 1px solid var(--glass-border);
 }
 
+/* CONTAINER */
+
 .navbar-container {
-    margin: 0 auto;
-    padding: 12px 16px;
+    height: 100%;
+    padding: 0 var(--pad-4);
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar-name {
-    flex: 2;
-}
+/* BRAND */
 
 .navbar-name-link {
-    display: inline-block;
     text-decoration: none;
-    color: #E0E1DD;
+    color: var(--text-0);
 
-    font-size: large;
-    font-weight: 1000;
+    font-size: 1.1rem;
+    font-weight: 600;
 
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: var(--pad-1) var(--pad-2);
+    border-radius: var(--r-md);
+
+    transition: background var(--t-fast) var(--ease),
+        color var(--t-fast) var(--ease);
 }
 
 .navbar-name-link:hover {
-    background: gray;
+    background: rgba(255, 255, 255, 0.08);
 }
+
+/*  LINKS */
 
 .navbar-links {
     list-style: none;
     margin: 0;
     padding: 0;
-    flex: 3;
 
     display: flex;
-    justify-content: space-between;
+    gap: var(--pad-3);
     margin-left: auto;
 }
 
 .navbar-item-link {
-    display: inline-block;
     text-decoration: none;
-    color: #E0E1DD;
+    color: var(--text-1);
 
+    padding: var(--pad-1) var(--pad-2);
+    border-radius: var(--r-md);
 
-    padding: 8px 10px;
-    border-radius: 8px;
+    transition: background var(--t-fast) var(--ease),
+        color var(--t-fast) var(--ease);
 }
 
 .navbar-item-link:hover {
-    background: gray;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-0);
 }
 
+/* HAMBURGER */
+
 .navbar-toggle {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    display: none;
 
     background: transparent;
     border: none;
-    border-radius: 8px;
+    cursor: pointer;
+    border-radius: var(--r-md);
+    padding: var(--pad-1);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: background var(--t-fast) var(--ease);
 }
 
 .navbar-toggle:hover {
-    background: gray;
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-toggle:focus {
@@ -88,27 +100,30 @@
 }
 
 .navbar-toggle:focus-visible {
-    outline: 2px solid #E0E1DD;
+    box-shadow: 0 0 0 2px var(--accent-cyan);
 }
 
 .navbar-toggle-bar {
     height: 3px;
-    width: 25px;
-    background: #E0E1DD;
-    margin: 4px 0;
+    width: 22px;
+    background: var(--text-0);
+    margin: 3px 0;
     border-radius: 2px;
 }
 
+/* DROPDOWN */
+
 .navbar-dropdown {
     display: none;
-    flex-direction: column;
+
     position: absolute;
-    top: 60px;
-    right: 16px;
-    background: #0D1B2A;
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: 8px 0;
+    top: calc(var(--navbar-height) - 4px);
+    right: var(--pad-3);
+
+    min-width: 180px;
+    padding: var(--pad-2);
+
+    border-radius: var(--r-lg);
 }
 
 .navbar-dropdown.open {
@@ -123,11 +138,22 @@
 
 .navbar-dropdown-item-link {
     display: block;
+    padding: var(--pad-2);
+    border-radius: var(--r-md);
+
     text-decoration: none;
-    color: #E0E1DD;
-    padding: 8px 16px;
+    color: var(--text-1);
+
+    transition: background var(--t-fast) var(--ease),
+        color var(--t-fast) var(--ease);
 }
 
+.navbar-dropdown-item-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-0);
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 450px) {
     .navbar-links {
@@ -136,22 +162,16 @@
 
     .navbar-toggle {
         display: inline-flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
-@media (min-width: 450px) {
+@media (min-width: 451px) {
     .navbar-toggle {
         display: none;
     }
 
     .navbar-dropdown,
     .navbar-dropdown.open {
-        display: none;
-    }
-
-    .navbar-dropdown-links {
         display: none;
     }
 }

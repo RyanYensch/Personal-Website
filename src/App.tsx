@@ -2,7 +2,7 @@ import './App.css'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout/Layout'
 import HomePage from './pages/Home Page/HomePage'
-import StarsBackground from './components/Stars/StarsBackground'
+import StarsBackground from './components/StarsBackground/StarsBackground'
 
 function App() {
   return (
