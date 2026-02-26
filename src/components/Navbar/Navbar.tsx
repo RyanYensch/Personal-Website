@@ -11,6 +11,26 @@ export default function Navbar() {
                             Home
                         </Link>
                     </li>
+                    <li className="navbar-item">
+                        <Link className="navbar-item-link" to="/projects">
+                            Projects
+                        </Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link className="navbar-item-link" to="/courses">
+                            Courses
+                        </Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link className="navbar-item-link" to="/career">
+                            Career
+                        </Link>
+                    </li>
+                    <li className="navbar-item">
+                        <Link className="navbar-item-link" to="/links">
+                            Links
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </nav>
