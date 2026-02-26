@@ -10,10 +10,16 @@ type Star = {
     a: number;
 }
 
+const MIN_EFFECT_RADIUS = 40;
+const SIZE_EFFECT_FACTOR = 30;
+const ORBIT_INTESITY = 0.08;
+const INWARD_PULL_STRENGTH = 0.4;
+
 export default function StarsBackground() {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
     const startsRef = useRef<Star[]>([]);
     const rafRef = useRef<number | null>(null);
+    const mouseRef = useRef<{ x: number, y: number } | null>(null);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -36,6 +42,10 @@ export default function StarsBackground() {
             startsRef.current = makeStars(count, width, height);
         };
 
+        const handleMove = (e: MouseEvent) => {
+            mouseRef.current = { x: e.clientX, y: e.clientY };
+        }
+
         const tick = () => {
             const { innerWidth: width, innerHeight: height } = window;
 
@@ -44,6 +54,32 @@ export default function StarsBackground() {
             ctx.clearRect(0, 0, width, height);
 
             for (const s of startsRef.current) {
+                const mouse = mouseRef.current;
+
+                if (mouse) {
+                    const dx = mouse.x - s.x;
+                    const dy = mouse.y - s.y;
+                    const dist = Math.hypot(dx, dy);
+
+                    const effectRadius = MIN_EFFECT_RADIUS + s.r * SIZE_EFFECT_FACTOR;
+
+                    if (dist < effectRadius) {
+                        const nx = dx / dist;
+                        const ny = dy / dist;
+
+                        const px = -ny;
+                        const py = nx;
+
+                        const strength = (1 - dist / effectRadius) * ORBIT_INTESITY;
+
+                        s.vx += px * strength;
+                        s.vy += py * strength;
+
+                        s.vx += nx * strength * INWARD_PULL_STRENGTH;
+                        s.vy += ny * strength * INWARD_PULL_STRENGTH;
+                    }
+                }
+
                 s.x += s.vx;
                 s.y += s.vy;
 
@@ -65,10 +101,12 @@ export default function StarsBackground() {
 
         resize();
         window.addEventListener("resize", resize);
+        window.addEventListener("mousemove", handleMove);
         rafRef.current = requestAnimationFrame(tick);
 
         return () => {
             window.removeEventListener("resize", resize);
+            window.removeEventListener("mousemove", handleMove);
             if (rafRef.current) cancelAnimationFrame(rafRef.current);
         };
     }, []);
