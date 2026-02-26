@@ -9,7 +9,6 @@
     height: var(--navbar-height);
     z-index: 1000;
 
-    /* darker than cards */
     background: rgba(13, 27, 42, 0.55);
     border-bottom: 1px solid var(--glass-border);
 }
@@ -41,10 +40,6 @@
         color var(--t-fast) var(--ease);
 }
 
-.navbar-name-link:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
 /*  LINKS */
 
 .navbar-links {
@@ -69,7 +64,6 @@
 }
 
 .navbar-item-link:hover {
-    background: rgba(255, 255, 255, 0.08);
     color: var(--text-0);
 }
 
@@ -89,10 +83,6 @@
     justify-content: center;
 
     transition: background var(--t-fast) var(--ease);
-}
-
-.navbar-toggle:hover {
-    background: rgba(255, 255, 255, 0.08);
 }
 
 .navbar-toggle:focus {
@@ -149,7 +139,6 @@
 }
 
 .navbar-dropdown-item-link:hover {
-    background: rgba(255, 255, 255, 0.08);
     color: var(--text-0);
 }
 

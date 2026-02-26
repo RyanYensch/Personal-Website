@@ -7,7 +7,7 @@ export default function Layout() {
             {/* Add the navbar and stuff */}
             <Navbar />
 
-            <main className="container main">
+            <main className="page">
                 <Outlet />
             </main>
         </div>
