@@ -5,6 +5,7 @@ export const PersonalWebsite: Project = {
     title: "Personal Website",
     summary: "This is the website you are looking at right now!",
     tags: ["React", "Vite", "TypeScript", "GitHub", "Frontend", "Web"],
+    coverImage: "/React-icon.png",
     featured: true,
     links: {
         github: "https://github.com/RyanYensch/Personal-Website",

@@ -3,6 +3,7 @@ export type Project = {
     title: string;
     summary: string;
     tags: string[];
+    coverImage?: string;
     featured?: boolean;
     links?: {
         github?: string;

@@ -27,3 +27,20 @@
     outline: none;
     color: var(--text-0);
 }
+
+.project {
+    text-decoration: none;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-img {
+    max-height: 50px;
+    max-width: 50px;
+}
+
+.project-title {
+    text-decoration: none;
+}
