@@ -28,6 +28,13 @@
     color: var(--text-0);
 }
 
+.projects {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .project-link {
     text-decoration: none;
     display: block;
@@ -38,6 +45,7 @@
 }
 
 .project-headers {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -46,26 +54,32 @@
 .project-info {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     min-width: 0;
+    min-height: 90px;
 }
 
 .project-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding-left: 10px;
+
     width: clamp(56px, 10vw, 96px);
     height: clamp(56px, 10vw, 96px);
     object-fit: contain;
-    flex: 0 0 auto;
 }
 
 .project-title {
     margin: 0;
-    min-width: 0;
-    flex: 1;
-    line-height: 1.1rem;
-    font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+    text-align: center;
+    font-size: clamp(1.2rem, 2.5vw, 1.7rem);
     font-weight: 800;
-    letter-spacing: 0.2px;
-    overflow-wrap: anywhere;
+    line-height: 1.2;
+    padding: 0 1rem;
+    max-width: 80%;
 }
 
 .project-summary {

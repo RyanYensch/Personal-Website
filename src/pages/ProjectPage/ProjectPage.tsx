@@ -20,7 +20,9 @@ export default function ProjectPage() {
                 <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={handleInputChange} className="search-input" />
             </GlassCard>
 
-            {projects.map(p => getProjectCard(p))}
+            <div className="projects">
+                {projects.map(p => getProjectCard(p))}
+            </div>
         </div>
     );
 }
