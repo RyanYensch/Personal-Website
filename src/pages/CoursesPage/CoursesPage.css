@@ -1,0 +1,174 @@
+.coursepage {
+    gap: 14px;
+}
+
+.course-carousel-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.slideC {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    width: 362px;
+    height: 272px;
+    margin: 0 auto;
+}
+
+.slide {
+    width: 362px;
+    height: 272px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide {
+    width: 362px;
+    height: 272px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: transform 500ms ease, opacity 500ms ease, visibility 500ms ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(100% + 12px);
+    width: 100%;
+    height: 64px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.18), transparent);
+
+    filter: blur(0.4px);
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+
+.course-card {
+    width: 362px;
+    height: 272px;
+    display: flex;
+    align-items: stretch;
+}
+
+.course-content {
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--text-1);
+}
+
+.course-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-code {
+    font-weight: 900;
+    font-size: 1.05rem;
+    color: var(--text-0);
+    letter-spacing: 0.02em;
+}
+
+.course-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.course-badge {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.9rem;
+}
+
+.course-name {
+    margin: 12px 0 0;
+    font-size: 1.25rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text-0);
+}
+
+.course-desc {
+    margin: 10px 0 0;
+    line-height: 1.45rem;
+    opacity: 0.92;
+    overflow-wrap: anywhere;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.course-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.course-link {
+    text-decoration: none;
+    color: var(--text-1);
+    font-weight: 800;
+    opacity: 0.9;
+}
+
+.course-link:hover {
+    opacity: 1;
+    color: var(--text-0);
+}
+
+.btns {
+    margin-top: 92px;
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbtn {
+    border: none;
+    background: transparent;
+    color: var(--text-0);
+    opacity: 0.9;
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1;
+    padding: 0.25rem 0.75rem;
+}
+
+.navbtn:hover {
+    opacity: 1;
+}
+
+.course-hint {
+    margin: 10px 0 0;
+    opacity: 0.85;
+}
+
+.course-hint-strong {
+    color: var(--text-0);
+    font-weight: 900;
+}
