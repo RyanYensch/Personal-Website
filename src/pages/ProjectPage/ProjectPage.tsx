@@ -34,10 +34,16 @@ function getProjectCard(project: Project): JSX.Element {
     return (
         <Link className="project-link" to={`/projects/${project.slug}`}>
             <GlassCard className="project">
-                <img src="/React-icon.png" className="project-img" />
-                <h2 className="project-title">{project.title}</h2>
-                <p className="project-summary">{project.summary}</p>
-                {project.tags.map(tag => <GlassCard className="project-tag">{tag}</GlassCard>)}
+                <div className="project-headers">
+                    <div className="project-info">
+                        <img src={project.coverImage} className="project-img" alt={`${project.title} logo`} />
+                        <h2 className="project-title">{project.title}</h2>
+                    </div>
+                    <p className="project-summary">{project.summary}</p>
+                </div>
+                <div className="project-tags">
+                    {project.tags.map(tag => <GlassCard key={tag} className="project-tag">{tag}</GlassCard>)}
+                </div>
             </GlassCard>
         </Link >
     );
