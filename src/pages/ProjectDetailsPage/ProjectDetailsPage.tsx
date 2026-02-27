@@ -33,7 +33,9 @@ export default function ProjectDetailsPage() {
         <div className="projectpage project-details-page">
             <div className="details-top">
                 <Link to="/projects" className="back-link">
-                    Back
+                    <GlassCard>
+                        Back
+                    </GlassCard>
                 </Link>
             </div>
 

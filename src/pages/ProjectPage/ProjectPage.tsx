@@ -1,20 +1,30 @@
-import { useState, type JSX } from "react";
+import type { JSX } from "react";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import { projects } from "../../content/projects";
 import "./ProjectPage.css"
 import { searchProjects, type Project } from "../../types/projects";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 export default function ProjectPage() {
-    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [searchParams, setSearchParams] = useSearchParams();
+
+    const searchTerm = searchParams.get("q") ?? "";
 
     const searchedProjects = searchProjects(projects, searchTerm);
+
+    const handleChange = (value: string) => {
+        if (value.trim() === "") {
+            setSearchParams({});
+        } else {
+            setSearchParams({ q: value });
+        }
+    };
 
     return (
         <div className="projectpage">
             <h1>These are my projects!</h1>
             <GlassCard className="search-container">
-                <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="search-input" />
+                <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={(e) => handleChange(e.target.value)} className="search-input" />
             </GlassCard>
 
             <div className="projects">
