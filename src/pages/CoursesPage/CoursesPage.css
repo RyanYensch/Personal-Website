@@ -24,14 +24,6 @@
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.slide {
-    width: 362px;
-    height: 272px;
-    position: absolute;
-    top: 0;
-    left: 0;
 
     transition: transform 500ms ease, opacity 500ms ease, visibility 500ms ease;
 
@@ -58,13 +50,12 @@
     pointer-events: none;
 }
 
-
-
 .course-card {
     width: 362px;
     height: 272px;
     display: flex;
     align-items: stretch;
+    background: rgba(13, 27, 42, 0.95);
 }
 
 .course-content {
