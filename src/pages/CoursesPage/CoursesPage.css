@@ -16,6 +16,8 @@
     width: 362px;
     height: 272px;
     margin: 0 auto;
+    touch-action: pan-y;
+    user-select: none;
 }
 
 .slide {

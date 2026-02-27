@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import "./CoursesPage.css";
 import { courses, type Course } from "../../content/courses/courses";
@@ -79,12 +79,48 @@ export default function CoursesPage() {
 
     const activeCourse = useMemo(() => data[active], [data, active]);
 
+    const startXRef = useRef<number | null>(null);
+    const startYRef = useRef<number | null>(null);
+    const draggingRef = useRef(false);
+
+    const SWIPE_MIN_PX = 50;
+    const SWIPE_MAX_OFF_AXIS = 60;
+
+    const onPointerDown = (e: React.PointerEvent) => {
+        if (e.pointerType === "mouse" && e.button !== 0) return;
+
+        startXRef.current = e.clientX;
+        startYRef.current = e.clientY;
+        draggingRef.current = true;
+
+        (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    };
+
+    const onPointerUp = (e: React.PointerEvent) => {
+        if (!draggingRef.current || startXRef.current == null || startYRef.current == null) return;
+
+        const dx = e.clientX - startXRef.current;
+        const dy = e.clientY - startYRef.current;
+
+        draggingRef.current = false;
+        startXRef.current = null;
+        startYRef.current = null;
+
+        if (Math.abs(dy) > SWIPE_MAX_OFF_AXIS) return;
+
+        if (dx > SWIPE_MIN_PX) {
+            prev();
+        } else if (dx < -SWIPE_MIN_PX) {
+            next();
+        }
+    };
+
     return (
         <div className="projectpage coursepage">
             <h1>Courses</h1>
 
             <div className="course-carousel-wrap">
-                <div className="slideC">
+                <div className="slideC" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
                     {data.map((course, i) => {
                         const offset = circularOffset(i, active, n);
                         const style = getSlideStyle(offset);
@@ -118,7 +154,7 @@ export default function CoursesPage() {
 
 function CourseCard({ course }: { course: Course }) {
     const status =
-        course.currentlyTaking ? "Currently taking" : course.mark != null ? `Mark: ${course.mark}` : "Completed";
+        course.currentlyTaking ? "Current" : course.mark != null ? `Mark: ${course.mark}` : "Completed";
 
     return (
         <div className="course-content">
