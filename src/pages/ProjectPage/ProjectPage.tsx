@@ -18,7 +18,7 @@ export default function ProjectPage() {
             </GlassCard>
 
             <div className="projects">
-                {searchedProjects.map(p => getProjectCard(p))}
+                {searchedProjects.map(p => <div key={p.slug}>{getProjectCard(p)}</div>)}
             </div>
         </div>
     );

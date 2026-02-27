@@ -7,7 +7,7 @@ export type Project = {
     featured?: boolean;
     links?: {
         github?: string;
-        demo?: string;
+        deployment?: string;
         doc?: string;
     };
     sections?: Array<{ heading: string, body: string }>;

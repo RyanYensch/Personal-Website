@@ -9,7 +9,7 @@ export const PersonalWebsite: Project = {
     featured: true,
     links: {
         github: "https://github.com/RyanYensch/Personal-Website",
-        demo: "http://localhost:5173/"
+        deployment: "http://localhost:5173/"
     },
     sections: [
         { heading: "What is this?", body: "..." },
