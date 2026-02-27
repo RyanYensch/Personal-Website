@@ -126,7 +126,13 @@ function CourseCard({ course }: { course: Course }) {
                 <div className="course-code">{course.code}</div>
 
                 <div className="course-badges">
-                    <GlassCard className="project-tag course-badge">{status}</GlassCard>
+                    <GlassCard className="project-tag course-badge">
+                        Term {course.term} {course.year}
+                    </GlassCard>
+
+                    <GlassCard className="project-tag course-badge">
+                        {status}
+                    </GlassCard>
                 </div>
             </div>
 
