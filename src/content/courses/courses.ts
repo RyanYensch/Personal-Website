@@ -22,7 +22,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP1511",
         mark: 89,
         grade: "HD",
-        description: "",
+        description:
+            "Foundational programming in C covering memory management, pointers, modular design, debugging, and algorithmic thinking. Built strong low-level reasoning and problem-solving skills essential for systems and backend development.",
     },
     {
         year: 2024,
@@ -32,7 +33,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MATH1131",
         mark: 81,
         grade: "DN",
-        description: "",
+        description:
+            "Calculus, linear algebra, and mathematical modelling. Developed analytical problem-solving ability and formal reasoning skills used in optimisation, machine learning, and engineering analysis.",
     },
     {
         year: 2024,
@@ -41,7 +43,8 @@ export const courses: Course[] = [
         name: "Physics 1A",
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/PHYS1121",
         grade: "SY",
-        description: "",
+        description:
+            "Mechanics, electromagnetism, and experimental physics. Strengthened quantitative modelling skills and applied mathematics to real-world engineering systems.",
     },
 
     {
@@ -52,7 +55,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MATH1231",
         mark: 85,
         grade: "HD",
-        description: "",
+        description:
+            "Multivariable calculus, differential equations, and advanced linear algebra. Built mathematical foundations for control systems, numerical computing, and optimisation problems.",
     },
     {
         year: 2024,
@@ -62,7 +66,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/ENGG1300",
         mark: 80,
         grade: "DN",
-        description: "",
+        description:
+            "Statics and dynamics of engineering systems. Developed structured modelling approaches and rigorous problem decomposition applicable to mechanical and robotics systems.",
     },
     {
         year: 2024,
@@ -72,7 +77,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP1531",
         mark: 100,
         grade: "HD",
-        description: "",
+        description:
+            "Team-based software development using Git, CI/CD, REST APIs, and agile workflows. Focused on scalable backend design, automated testing, and collaborative engineering practices.",
     },
 
     {
@@ -83,7 +89,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/DESN1000",
         mark: 83,
         grade: "DN",
-        description: "",
+        description:
+            "Project-based engineering design with stakeholder requirements, prototyping, and iterative development. Strengthened teamwork, documentation, and systems-level thinking.",
     },
     {
         year: 2024,
@@ -93,7 +100,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/ELEC1111",
         mark: 91,
         grade: "HD",
-        description: "",
+        description:
+            "Circuit analysis, signal behaviour, and electronic systems modelling. Built strong fundamentals in hardware-level reasoning and applied mathematics.",
     },
     {
         year: 2024,
@@ -103,7 +111,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP1521",
         mark: 94,
         grade: "HD",
-        description: "",
+        description:
+            "Low-level systems programming, assembly, memory management, and concurrency. Developed deep understanding of how software interacts with hardware and operating systems.",
     },
 
     {
@@ -114,7 +123,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MATH2018",
         mark: 89,
         grade: "HD",
-        description: "",
+        description:
+            "Advanced differential equations, transforms, and applied mathematical modelling. Strengthened analytical techniques used in control, signal processing, and robotics.",
     },
     {
         year: 2025,
@@ -124,7 +134,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/ELEC2141",
         mark: 94,
         grade: "HD",
-        description: "",
+        description:
+            "RTL design, finite state machines, FPGA implementation, and timing analysis. Gained practical experience designing and verifying digital hardware systems.",
     },
     {
         year: 2025,
@@ -134,7 +145,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP2521",
         mark: 97,
         grade: "HD",
-        description: "",
+        description:
+            "Complexity analysis, advanced data structures, graph algorithms, and optimisation. Strengthened problem-solving under performance constraints and algorithmic reasoning.",
     },
 
     {
@@ -145,7 +157,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP2511",
         mark: 90,
         grade: "HD",
-        description: "",
+        description:
+            "Object-oriented architecture, design patterns, testing, and maintainable software design. Focused on scalable, modular systems and clean code practices.",
     },
     {
         year: 2025,
@@ -155,7 +168,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP6841",
         mark: 83,
         grade: "DN",
-        description: "",
+        description:
+            "Applied cryptography, authentication protocols, threat modelling, and security engineering. Built practical understanding of secure system design and vulnerability mitigation.",
     },
     {
         year: 2025,
@@ -165,7 +179,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MMAN2300",
         mark: 88,
         grade: "HD",
-        description: "",
+        description:
+            "Dynamics and advanced mechanical system modelling. Applied mathematical tools to real-world mechanical engineering problems.",
     },
 
     {
@@ -176,7 +191,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MATH2089",
         mark: 89,
         grade: "HD",
-        description: "",
+        description:
+            "Numerical optimisation, statistical modelling, and computational methods. Developed tools for data-driven decision making and simulation-based engineering.",
     },
     {
         year: 2025,
@@ -186,7 +202,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MTRN2500",
         mark: 96,
         grade: "HD",
-        description: "",
+        description:
+            "Embedded systems programming, real-time control, and hardware-software integration. Built experience interfacing sensors, actuators, and microcontrollers.",
     },
     {
         year: 2025,
@@ -196,7 +213,8 @@ export const courses: Course[] = [
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MMAN1130",
         mark: 87,
         grade: "HD",
-        description: "",
+        description:
+            "Engineering design processes, manufacturing methods, and CAD-based prototyping. Emphasised practical product development and technical documentation.",
     },
 
     {
@@ -206,7 +224,8 @@ export const courses: Course[] = [
         code: "COMP6443",
         name: "Web Application Security and Testing",
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/COMP6443",
-        description: "",
+        description:
+            "Advanced web security, penetration testing, and exploit development. Practical experience identifying and mitigating real-world vulnerabilities in web systems.",
     },
     {
         year: 2026,
@@ -215,7 +234,8 @@ export const courses: Course[] = [
         code: "ENGG2400",
         name: "Mechanics of Solids 1",
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/ENGG2400",
-        description: "",
+        description:
+            "Stress analysis, material behaviour, and structural modelling. Applied engineering mathematics to analyse and design load-bearing systems.",
     },
     {
         year: 2026,
@@ -224,6 +244,7 @@ export const courses: Course[] = [
         code: "MTRN3210",
         name: "Feedback Control Systems",
         unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MTRN3210",
-        description: "",
+        description:
+            "Control theory, stability analysis, and controller design. Implemented feedback systems using mathematical modelling and simulation tools.",
     },
 ];
