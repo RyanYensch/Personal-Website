@@ -1,35 +1,27 @@
-import { useState, type ChangeEvent, type JSX } from "react";
+import { useState, type JSX } from "react";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import { projects } from "../../content/projects";
 import "./ProjectPage.css"
-import type { Project } from "../../types/projects";
+import { searchProjects, type Project } from "../../types/projects";
 import { Link } from "react-router-dom";
 
 export default function ProjectPage() {
     const [searchTerm, setSearchTerm] = useState<string>("");
 
-    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        setSearchTerm(event.target.value);
-        search(searchTerm);
-    }
+    const searchedProjects = searchProjects(projects, searchTerm);
 
     return (
         <div className="projectpage">
             <h1>These are my projects!</h1>
             <GlassCard className="search-container">
-                <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={handleInputChange} className="search-input" />
+                <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="search-input" />
             </GlassCard>
 
             <div className="projects">
-                {projects.map(p => getProjectCard(p))}
+                {searchedProjects.map(p => getProjectCard(p))}
             </div>
         </div>
     );
-}
-
-function search(searchTerm: string) {
-    console.log(searchTerm);
-    return;
 }
 
 function getProjectCard(project: Project): JSX.Element {
