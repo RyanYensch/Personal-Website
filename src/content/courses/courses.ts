@@ -221,9 +221,9 @@ export const courses: Course[] = [
         year: 2026,
         term: 1,
         currentlyTaking: true,
-        code: "MMAN3210",
+        code: "MTRN3210",
         name: "Feedback Control Systems",
-        unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MMAN3210",
+        unswUrl: "https://www.handbook.unsw.edu.au/undergraduate/courses/current/MTRN3210",
         description: "",
     },
 ];

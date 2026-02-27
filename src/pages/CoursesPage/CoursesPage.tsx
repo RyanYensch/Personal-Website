@@ -81,8 +81,12 @@ export default function CoursesPage() {
 
     const startXRef = useRef<number | null>(null);
     const startYRef = useRef<number | null>(null);
-    const draggingRef = useRef(false);
+    const pointerIdRef = useRef<number | null>(null);
 
+    const isDraggingRef = useRef(false);
+    const didSwipeRef = useRef(false);
+
+    const DRAG_START_PX = 10;
     const SWIPE_MIN_PX = 50;
     const SWIPE_MAX_OFF_AXIS = 60;
 
@@ -91,27 +95,57 @@ export default function CoursesPage() {
 
         startXRef.current = e.clientX;
         startYRef.current = e.clientY;
-        draggingRef.current = true;
+        pointerIdRef.current = e.pointerId;
 
-        (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        isDraggingRef.current = false;
+        didSwipeRef.current = false;
     };
 
-    const onPointerUp = (e: React.PointerEvent) => {
-        if (!draggingRef.current || startXRef.current == null || startYRef.current == null) return;
+    const onPointerMove = (e: React.PointerEvent) => {
+        if (startXRef.current == null || startYRef.current == null) return;
 
         const dx = e.clientX - startXRef.current;
         const dy = e.clientY - startYRef.current;
 
-        draggingRef.current = false;
+        if (!isDraggingRef.current && Math.abs(dy) > Math.abs(dx)) return;
+
+        if (!isDraggingRef.current && Math.abs(dx) > DRAG_START_PX) {
+            isDraggingRef.current = true;
+
+            (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+        }
+    };
+
+    const onPointerUp = (e: React.PointerEvent) => {
+        if (startXRef.current == null || startYRef.current == null) return;
+
+        const dx = e.clientX - startXRef.current;
+        const dy = e.clientY - startYRef.current;
+
         startXRef.current = null;
         startYRef.current = null;
+        pointerIdRef.current = null;
+
+        if (!isDraggingRef.current) return;
+
+        isDraggingRef.current = false;
 
         if (Math.abs(dy) > SWIPE_MAX_OFF_AXIS) return;
 
         if (dx > SWIPE_MIN_PX) {
+            didSwipeRef.current = true;
             prev();
         } else if (dx < -SWIPE_MIN_PX) {
+            didSwipeRef.current = true;
             next();
+        }
+    };
+
+    const onClickCapture = (e: React.MouseEvent) => {
+        if (didSwipeRef.current) {
+            e.preventDefault();
+            e.stopPropagation();
+            didSwipeRef.current = false;
         }
     };
 
@@ -120,7 +154,7 @@ export default function CoursesPage() {
             <h1>Courses</h1>
 
             <div className="course-carousel-wrap">
-                <div className="slideC" onPointerDown={onPointerDown} onPointerUp={onPointerUp}>
+                <div className="slideC" onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp} onClickCapture={onClickCapture}>
                     {data.map((course, i) => {
                         const offset = circularOffset(i, active, n);
                         const style = getSlideStyle(offset);
