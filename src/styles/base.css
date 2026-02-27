@@ -18,7 +18,10 @@ body {
 }
 
 .page {
+    display: flex;
     padding-top: var(--navbar-height);
+    align-items: center;
+    justify-content: center;
 }
 
 a {
