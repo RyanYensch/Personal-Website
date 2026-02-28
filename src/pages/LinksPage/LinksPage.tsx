@@ -1,5 +1,6 @@
 import GlassCard from "../../components/GlassCard/GlassCard";
 import { logoLinks } from "../../content/links/logoLink";
+import "./LinksPage.css"
 
 export default function LinksPage() {
     return (
@@ -8,9 +9,17 @@ export default function LinksPage() {
 
             <GlassCard className="links-container">
                 {logoLinks.map(l =>
-                    <a href={l.ref} target="_blank" rel="noreferrer" className="course-link">
-                        <img className="links-logo" key={l.name} src={l.img} alt={`${l.name} Logo`} />
+                    <a key={l.name} href={l.ref} target="_blank" rel="noreferrer" className="links-link">
+                        <img className="links-logo" src={l.img} alt={`${l.name} Logo`} />
                     </a>)}
+            </GlassCard>
+
+            <GlassCard className="github-sumamry">
+                GitHub Summary
+            </GlassCard>
+
+            <GlassCard className="leetcode-summary">
+                LeetCode Sumamry
             </GlassCard>
         </div>
     );
