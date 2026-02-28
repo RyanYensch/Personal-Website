@@ -75,7 +75,7 @@ export const Careers: Career[] = [
 
 
     {
-        title: "Bachelor of Engineering (Honours)",
+        title: "Bachelor of Engineering (Robotics and Mechatronics) (Honours)",
         employer: "UNSW Sydney",
         start: "February 2024",
         end: "Present",
@@ -147,6 +147,59 @@ export const Careers: Career[] = [
             "Built and Integrated backend APIs for real-time room availability data.",
             "Collaborated across teams to shape product roadmap.",
             "Reviewed code contributions.",
+        ],
+        category: "volunteering",
+    },
+
+    {
+        title: "Clash Royale Events Subcommittee Member",
+        employer: "UNSW Clash Royale Society",
+        start: "January 2025",
+        end: "Present",
+        summary:
+            "Organised and executed Clash Royale gaming events for the UNSW student community, fostering engagement, competition and collaborative play.",
+        coverImage: "/clash-royale-society.png",
+        tags: ["Events Management", "Community Engagement", "Teamwork"],
+        points: [
+            "Co-organised monthly Clash Royale tournaments with structured brackets and scoring.",
+            "Collaborated with other student groups to increase cross-community involvement.",
+        ],
+        category: "volunteering",
+    },
+
+    {
+        title: "Freerooms Subcommittee Member",
+        employer: "UNSW Software Development Society (DevSoc)",
+        start: "September 2025",
+        end: "December 2025",
+        summary:
+            "Contributed to the development and maintenance of the open-source Freerooms application, enhancing university usability and campus experience.",
+        coverImage: "/freerooms.webp",
+        tags: ["React", "Next.js", "TypeScript", "Open Source", "Team Collaboration"],
+        points: [
+            "Collaborated with team members using Git, pull requests and issue workflows.",
+            "Participated in planning and design discussions to drive feature prioritisation.",
+            "Engaged in cross-team communication to integrate backend API changes.",
+            "Built a website scraper to discover new study spaces across the UNSW campus."
+        ],
+        category: "volunteering",
+    },
+
+    {
+        title: "DevSoc Software Development Training Program Trainee",
+        employer: "UNSW Software Development Society (DevSoc)",
+        start: "May 2025",
+        end: "August 2025",
+        summary:
+            "Selected for and completed DevSoc's immersive software engineering training program, gaining practical experience with modern web technologies and team workflows.",
+        coverImage: "/devsoc-logo.png",
+        tags: ["React", "TypeScript", "Git", "Teamwork", "Agile"],
+        points: [
+            "Completed term-long training covering version control, frontend and backend fundamentals.",
+            "Delivered small team software projects using industry-standard tools and workflows.",
+            "Practiced code reviews, iterative development and collaborative debugging.",
+            "Gained proficiency in TypeScript, React and Express",
+            "Built a web app for a group to decide where and when to eat (When2Eat).",
         ],
         category: "volunteering",
     },
