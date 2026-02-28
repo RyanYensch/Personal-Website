@@ -13,14 +13,6 @@ export default function LinksPage() {
                         <img className="links-logo" src={l.img} alt={`${l.name} Logo`} />
                     </a>)}
             </GlassCard>
-
-            <GlassCard className="github-sumamry">
-                GitHub Summary
-            </GlassCard>
-
-            <GlassCard className="leetcode-summary">
-                LeetCode Sumamry
-            </GlassCard>
         </div>
     );
 }
