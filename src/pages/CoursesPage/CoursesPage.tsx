@@ -1,7 +1,8 @@
 import { useMemo, useRef, useState } from "react";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import "./CoursesPage.css";
-import { courses, type Course } from "../../content/courses/courses";
+import { courses } from "../../content/courses/courses";
+import type { Course } from "../../types/courses";
 
 // Original Design Credit: https://codesandbox.io/p/sandbox/react-carousel-3d-9x3wt
 
