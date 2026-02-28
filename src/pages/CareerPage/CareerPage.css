@@ -21,7 +21,6 @@
     padding: 1.25rem;
 }
 
-
 .career-headers {
     display: flex;
     flex-direction: column;
@@ -58,6 +57,7 @@
     font-size: clamp(1.4rem, 2.8vw, 2.1rem);
     line-height: 1.15;
     overflow-wrap: anywhere;
+    min-width: 0;
 }
 
 .career-headers-info {
@@ -74,21 +74,12 @@
     padding: 0.4rem 0.75rem;
     border-radius: 999px;
     font-size: 0.95rem;
+    line-height: 1.1;
     color: var(--text-0);
 }
 
 .career-dates {
     color: var(--text-1);
-}
-
-@media (max-width: 560px) {
-    .career-headers-top {
-        grid-template-columns: 1fr;
-    }
-
-    .career-headers-info {
-        justify-content: flex-start;
-    }
 }
 
 .career-tags {
@@ -102,8 +93,8 @@
     padding: 0.32rem 0.65rem;
     border-radius: 999px;
     font-size: 0.9rem;
-    color: var(--text-0);
     line-height: 1;
+    color: var(--text-0);
 }
 
 .career-summary {
@@ -151,33 +142,18 @@
     font-size: 0.95rem;
 }
 
-@media (min-width: 720px) {
-
-    .career-headers-titleinfo {
-        padding-right: 0.5rem;
-    }
-
-    .career-headers {
-        gap: 0.85rem;
-    }
-
-    .career {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .career-headers-info {
-        margin-top: -0.25rem;
-    }
-}
-
-@media (max-width: 520px) {
+@media (max-width: 560px) {
     .career {
         padding: 1rem;
     }
 
+    .career-headers-top {
+        grid-template-columns: 1fr;
+    }
+
     .career-headers-info {
         justify-content: flex-start;
+        white-space: normal;
     }
 
     .career-points {
