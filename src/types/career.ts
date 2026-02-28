@@ -1,3 +1,5 @@
+export type CareerCategory = "work" | "education" | "volunteering";
+
 export type Career = {
     title: string;
     employer: string;
@@ -6,5 +8,6 @@ export type Career = {
     summary: string;
     coverImage: string;
     tags: string[];
-    points: Array<string>;
+    points: string[];
+    category: CareerCategory;
 };

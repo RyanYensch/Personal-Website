@@ -69,6 +69,41 @@
     white-space: nowrap;
 }
 
+.career-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.career-section {
+    padding: 1.25rem;
+}
+
+.career-section-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.9rem;
+}
+
+.career-section-title {
+    margin: 0;
+    color: var(--text-0);
+    font-weight: 900;
+    letter-spacing: 0.2px;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+}
+
+.career-section-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.career-section .career {
+    padding: 1.1rem;
+}
+
 .career-employer,
 .career-dates {
     padding: 0.4rem 0.75rem;
