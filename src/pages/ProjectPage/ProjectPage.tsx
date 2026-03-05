@@ -22,7 +22,7 @@ export default function ProjectPage() {
 
     return (
         <div className="projectpage">
-            <h1>These are my projects!</h1>
+            <h1>Projects</h1>
             <GlassCard className="search-container">
                 <input type="text" placeholder="Search Projects..." value={searchTerm} onChange={(e) => handleChange(e.target.value)} className="search-input" />
             </GlassCard>
