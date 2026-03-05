@@ -17,7 +17,11 @@ export default function HomePage() {
 
             <GlassCard className="about-card">
                 <p className="about-text">
-                    To add an about me lol
+                    I'm Ryan, a Mechatronics Engineering and Computer Science student at UNSW with a strong
+                    interest in cybersecurity, systems, and building things that actually work in the real world.
+                    I enjoy exploring how software and hardware interact, from web applications and APIs to
+                    embedded systems and FPGA design. Most of my projects come from curiosity of learning how
+                    things break, how they work, and how to build them better.
                 </p>
             </GlassCard>
 
