@@ -30,17 +30,17 @@ export default function HomePage() {
                     </GlassCard>
                 </Link>
 
-                <Link to="/career" className="nav-tile">
-                    <GlassCard className="glass-tile">
-                        <Briefcase className="nav-icon" />
-                        <span>Career</span>
-                    </GlassCard>
-                </Link>
-
                 <Link to="/courses" className="nav-tile">
                     <GlassCard className="glass-tile">
                         <GraduationCap className="nav-icon" />
                         <span>Courses</span>
+                    </GlassCard>
+                </Link>
+
+                <Link to="/career" className="nav-tile">
+                    <GlassCard className="glass-tile">
+                        <Briefcase className="nav-icon" />
+                        <span>Career</span>
                     </GlassCard>
                 </Link>
 
