@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import "./HomePage.css";
 import { skills } from "../../content/skills/skills";
+import { FolderGit2, Briefcase, GraduationCap, Link as LinkIcon } from "lucide-react";
 
 export default function HomePage() {
     return (
@@ -21,29 +22,35 @@ export default function HomePage() {
             </GlassCard>
 
             <div className="home-nav-grid">
+
                 <Link to="/projects" className="nav-tile">
                     <GlassCard className="glass-tile">
+                        <FolderGit2 className="nav-icon" />
                         <span>Projects</span>
                     </GlassCard>
                 </Link>
 
                 <Link to="/career" className="nav-tile">
                     <GlassCard className="glass-tile">
+                        <Briefcase className="nav-icon" />
                         <span>Career</span>
                     </GlassCard>
                 </Link>
 
                 <Link to="/courses" className="nav-tile">
                     <GlassCard className="glass-tile">
+                        <GraduationCap className="nav-icon" />
                         <span>Courses</span>
                     </GlassCard>
                 </Link>
 
                 <Link to="/links" className="nav-tile">
                     <GlassCard className="glass-tile">
+                        <LinkIcon className="nav-icon" />
                         <span>Links</span>
                     </GlassCard>
                 </Link>
+
             </div>
 
             <div className="home-socials">
