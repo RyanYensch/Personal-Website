@@ -5,28 +5,42 @@ import "./LinksPage.css"
 export default function LinksPage() {
     return (
         <div className="linkspage">
-            <h1>These Are My Links</h1>
 
-            <div className="links-list">
+            <div className="links-header">
+                <h1>Connect</h1>
+                <p>
+                    Find me across the web - explore my work, connect professionally,
+                    or reach out directly.
+                </p>
+            </div>
+
+            <div className="links-grid">
                 {logoLinks.map(l => (
-                    <GlassCard key={l.name} className="link-item">
+                    <GlassCard key={l.name} className="link-card">
                         <a
                             href={l.ref}
                             target="_blank"
                             rel="noreferrer"
-                            className="links-link"
+                            className="link-content"
                         >
-                            <img className="links-icon" src={l.img} alt={`${l.name} Logo`} />
-                            <div className="links-text">
-                                <span className="links-title">{l.name}</span>
+                            <img
+                                className="link-icon"
+                                src={l.img}
+                                alt={`${l.name} logo`}
+                            />
+
+                            <div className="link-text">
                                 {l.description && (
-                                    <span className="links-desc">{l.description}</span>
+                                    <span className="link-desc">
+                                        {l.description}
+                                    </span>
                                 )}
                             </div>
                         </a>
                     </GlassCard>
                 ))}
             </div>
+
         </div>
     );
 }

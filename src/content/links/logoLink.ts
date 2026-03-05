@@ -11,7 +11,7 @@ export const logoLinks: LogoLink[] = [
         name: "GitHub",
         img: "/github-icon.svg",
         ref: "https://github.com/RyanYensch",
-        description: "View and Explore my open source projects."
+        description: "View and explore my open source projects."
     },
     {
         name: "eMail",
