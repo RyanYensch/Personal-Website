@@ -2,14 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 3rem 1rem;
-    text-align: center;
+    gap: 2.5rem;
+
+    padding: 3rem 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 
 .hero-section {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+    max-width: 900px;
 }
 
 .hero-title {
@@ -20,14 +25,16 @@
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
     color: var(--text-1);
     opacity: 0.85;
+    line-height: 1.4;
 }
 
 
 .about-card {
-    max-width: 800px;
+    width: 100%;
+    max-width: 700px;
     padding: 1.5rem 2rem;
     font-size: 1rem;
     color: var(--text-0);
@@ -41,11 +48,12 @@
 
 .home-nav-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
     gap: 1.5rem;
     width: 100%;
     max-width: 900px;
-    padding: 0 1rem;
 }
 
 .nav-tile {
@@ -54,19 +62,84 @@
 
 .glass-tile {
     padding: 1.5rem;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
+
     color: var(--text-0);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 120px;
+
+    min-height: 110px;
+
     transition: transform var(--t-medium) var(--ease),
         box-shadow var(--t-medium) var(--ease);
 }
 
 .glass-tile:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-cyan);
+}
+
+
+.skills-card {
+    width: 100%;
+    max-width: 1200px;
+    padding: 2rem 2.5rem;
+}
+
+.skills-title {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 2rem;
+    width: 100%;
+}
+
+.skills-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills-category-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
+}
+
+
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skills-link {
+    text-decoration: none;
+}
+
+.skills-tag {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 999px;
+    white-space: nowrap;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skills-tag:hover {
+    transform: translateY(-2px);
     box-shadow: var(--glow-cyan);
 }
 
@@ -74,12 +147,39 @@
 .home-socials {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+
+    .homepage {
+        gap: 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .skills-card {
+        padding: 1.5rem;
+    }
+
+    .skills-grid {
+        gap: 1.5rem;
+    }
+
+    .glass-tile {
+        min-height: 90px;
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }

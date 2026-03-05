@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import GlassCard from "../../components/GlassCard/GlassCard";
 import "./HomePage.css";
+import { skills } from "../../content/skills/skills";
 
 export default function HomePage() {
     return (
@@ -47,6 +48,32 @@ export default function HomePage() {
 
             <div className="home-socials">
             </div>
+
+            <GlassCard className="skills-card">
+                <h2 className="skills-title">Technologies & Skills</h2>
+
+                <div className="skills-grid">
+                    {Object.entries(skills).map(([category, items]) => (
+                        <div key={category} className="skills-category">
+                            <h3 className="skills-category-title">{category}</h3>
+
+                            <div className="skills-tags">
+                                {items.map(skill => (
+                                    <Link
+                                        key={skill}
+                                        to={`/projects?q=${encodeURIComponent(skill)}`}
+                                        className="skills-link"
+                                    >
+                                        <GlassCard className="skills-tag">
+                                            {skill}
+                                        </GlassCard>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </GlassCard>
 
         </div>
     );
