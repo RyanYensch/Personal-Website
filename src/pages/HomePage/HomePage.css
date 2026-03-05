@@ -102,7 +102,7 @@
 .skills-grid {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
     gap: 2rem;
     width: 100%;
@@ -133,12 +133,8 @@
 }
 
 .skills-tag {
-    padding: 0.3rem 0.7rem;
-    font-size: 0.85rem;
-    border-radius: 999px;
-    white-space: nowrap;
-
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
 }
 
 .skills-tag:hover {
