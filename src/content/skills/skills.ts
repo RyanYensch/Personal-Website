@@ -2,8 +2,7 @@ export type Skills = {
     "Languages": string[];
     "Frameworks & Libraries": string[];
     "Cybersecurity": string[];
-    "Tools & Technologies": string[];
-    "Hardware & Embedded": string[];
+    "Tools, DevOps & Hardware": string[];
 };
 
 export const skills: Skills = {
@@ -37,22 +36,18 @@ export const skills: Skills = {
         "Basic Vulnerability Exploitation"
     ],
 
-    "Tools & Technologies": [
+    "Tools, DevOps & Hardware": [
         "Git",
         "GitHub",
         "Linux",
+        "Docker",
         "CI/CD",
-        "API Development"
-    ],
-
-    "Hardware & Embedded": [
+        "API Development",
         "FPGA Development",
         "Vivado",
-        "Verilog",
         "Arduino",
         "Digital Logic Design",
         "Microcontrollers",
-        "Basic Circuit Design",
         "Hardware Debugging"
     ]
 };
