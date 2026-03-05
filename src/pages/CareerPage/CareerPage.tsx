@@ -17,7 +17,7 @@ export default function CareerPage() {
 
     return (
         <div className="careerpage">
-            <h1>This is my Career</h1>
+            <h1>Career</h1>
 
             <div className="career-sections">
                 {SECTION_ORDER.map((cat) => {
