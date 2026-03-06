@@ -3,6 +3,7 @@ import { Physics3D } from "./3dPhysics";
 import { CodingEscapeRoom } from "./codingEscapeRoom";
 import { CSGOSecurityProject } from "./csgoSecurity";
 import { DiscordBot } from "./discordBot";
+import { DungeonMania } from "./dungeonMania";
 import { FreeRooms } from "./freeRooms";
 import { FreeRoomsScrapers } from "./freeRoomsScraper";
 import { GameSwipe } from "./gameSwipe";
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     FreeRooms,
     FreeRoomsScrapers,
     Toohak,
+    DungeonMania,
     CSGOSecurityProject,
     GameSwipe,
     Physics3D,
