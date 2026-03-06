@@ -18,7 +18,8 @@ export const PersonalWebsite: Project = {
     coverImage: "/React-icon.png",
     featured: true,
     links: {
-        github: "https://github.com/RyanYensch/Personal-Website"
+        github: "https://github.com/RyanYensch/Personal-Website",
+        deployment: "https://ryan.yensch.com"
     },
     sections: [
         {
