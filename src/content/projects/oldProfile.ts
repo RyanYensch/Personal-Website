@@ -22,7 +22,7 @@ export const ProfileWebsite: Project = {
         {
             heading: "Overview",
             body:
-                "This project was an earlier attempt at creating a personal profile website. The main idea was to experiment with a visual design concept based on contrast — pairing opposing colours, layouts, and styles to create a distinctive look."
+                "This project was an earlier attempt at creating a personal profile website. The main idea was to experiment with a visual design concept based on contrast, pairing opposing colours, layouts, and styles to create a distinctive look."
         },
         {
             heading: "Design Theme",

@@ -22,7 +22,7 @@ export const GameSwipe: Project = {
         {
             heading: "Overview",
             body:
-                "GameSwipe is a web application designed to solve a very common problem when gaming with friends: deciding what to play. The idea is simple — players connect their Steam libraries and swipe through games in a Tinder-like interface. When everyone in the group likes the same game, it becomes a match."
+                "GameSwipe is a web application designed to solve a very common problem when gaming with friends: deciding what to play. The idea is simple, players connect their Steam libraries and swipe through games in a Tinder-like interface. When everyone in the group likes the same game, it becomes a match."
         },
         {
             heading: "How It Works",
